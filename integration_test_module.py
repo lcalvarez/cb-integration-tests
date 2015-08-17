@@ -2,9 +2,13 @@
 
 # ---------------------------------------------------------------------------
 # Author: Luis Alvarez
-# File Description
+# File Description:
+# This code is implements
+# the functins necessary to
+# traverse through checkbook.io
+# and test the functionality
 
-# Imports -------------------------------------------------------------------
+# ---------------------------- Imports -------------------------------------
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -12,11 +16,8 @@ from selenium.webdriver.support.ui import Select
 import random
 import string
 import time
-import ipdb
 
-# <TODO> Docstring definition assumptions and arguments.
-
-# Globals for waiting in between 
+# Globals for selenium wait driver and sleep
 wait_time = 20
 sleep_time = 5
 
@@ -433,7 +434,7 @@ def verify_account(info,driver,environment,ind_signup=True):
         btn = wait_for_element(By.XPATH,
                                '//button[contains(text(),"Activate!")]',
                                wait,
-                               "Can't find 'Activate!' button")
+                               "Can't find 'Activate!' button\nNote that this button does not currently work for Firefox in Sandbox Mode")
                          
         driver.execute_script(mouseOverScript,btn) 
         driver.execute_script("arguments[0].click();",btn)
@@ -695,3 +696,5 @@ def print_or_deposit_online(recipient_info,driver,deposit_online=True):
                          'willSavePdf',
                          wait,
                          'No Save PDF Button').click()
+                         
+# ---------------------------------------------------------------------------
