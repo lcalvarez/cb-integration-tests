@@ -27,6 +27,6 @@ checks can be sent or requested
 
 # integration_test_module.py
 This code is implements
-the functins necessary to
+the functions necessary to
 traverse through checkbook.io
 and test the functionality
