@@ -57,8 +57,8 @@ def create_info(ind=True):
                       'whole_name':'TestFirst TestLast',
                       'amount':str(random.randint(1,10)),
                       'memo':'Automated Test',
-                      'email_password':'0o9i8u7y',
-                      'online_passcode':'18715621',
+                      'email_password':'xxxx00000',
+                      'online_passcode':'xxxxx0000',
                       'bus_name':'Bus Name'+id_generator()}
                       
     if ind:
